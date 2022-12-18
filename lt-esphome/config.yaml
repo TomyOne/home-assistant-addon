@@ -6,22 +6,22 @@ arch:
 auth_api: true
 backup_exclude:
 - '*/*/'
-description: ESPHome add-on for intelligently managing all your ESP8266/ESP32 devices
+description: LT-ESPHome add-on for intelligently managing all your ESP8266/ESP32 and BEKEN devices
 hassio_api: true
 host_network: true
-image: ghcr.io/esphome/esphome-hassio-{arch}
+image: ghcr.io/tomyone/lt-esphome-hassio-{arch}
 ingress: true
 ingress_port: 0
 init: false
 map:
 - ssl:ro
 - config:rw
-name: ESPHome
+name: LT-ESPHome
 panel_icon: mdi:chip
 ports:
-  6052/tcp: null
+  6053/tcp: null
 ports_description:
-  6052/tcp: Web interface (not required for Home Assistant ingress)
+  6053/tcp: Web interface (not required for Home Assistant ingress)
 schema:
   certfile: str?
   default_compile_process_limit: int(1,)?
@@ -31,7 +31,7 @@ schema:
   ssl: bool?
   status_use_ping: bool?
   streamer_mode: bool?
-slug: esphome
+slug: lt-esphome
 uart: true
-url: https://esphome.io/
-version: 2022.12.1
+url: https://docs.libretuya.ml/docs/projects/esphome/
+version: 2022.12
